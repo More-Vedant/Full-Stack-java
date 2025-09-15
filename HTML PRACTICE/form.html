@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+    <style>
+        * {
+            color: black;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">user details</legend>
+        <form class="form">
+            <label for="name">name</label>
+            <input id="name" required type="text" placeholder="please enter the name" minlength="1" maxlength="15"/>
+            <br>
+
+            <label>age</label>
+            <input required type="number" placeholder="enter the age" min="5" max="15" /> <br>
+
+            <label>email</label>
+            <input required type="email" placeholder="enter the email" /> <br>
+            <fieldset>
+                <legend>Gender</legend>
+                <label>Male</label>
+                <input required type="radio" placeholder="enter the name" />
+                <label>Female</label>
+                <input required type="radio" placeholder="enter the name" />
+                <br>
+            </fieldset>
+            <label>phone</label>
+            <input required type="tel" placeholder="enter the phone" /> <br>
+
+            <label>Country</label>
+            <select id="select">
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="America">America</option>
+            </select>
+
+            <input list="list" placeholder="select">
+            <datalist id="list">
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="America">America</option>
+            </datalist>
+            <br>
+
+            <label>address</label>
+            <textarea required cols="70" rows="5" placeholder="enter the area"></textarea>
+            <br>
+
+            <label>Time</label>
+            <input type="time">
+            <label>Date</label>
+            <input type="date">
+            <label>Checkbox</label>
+            <input type="checkbox">
+
+            <input type="file">
+
+            <button type="submit">click me</button>
+            <input type="submit" value="click me">
+        </form>
+    </fieldset>
+</body>
+</html>

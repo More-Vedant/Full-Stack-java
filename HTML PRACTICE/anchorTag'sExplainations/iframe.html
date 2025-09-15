@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <marquee bgcolor="gray" loop behavior="smooth" direction="right">
+        <h1> Alice in Borderland</h1>
+        <p>Alice in Borderland Season 3 Coming Soon</p>
+    </marquee>
+
+    <h1>YouTube</h1>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/SP0el6SxxjU" 
+    title="Alice In Borderland Season 3 | Official Trailer | Netflix" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Google Map</h2>
+    <div class="mapouter"><div class="gmap_canvas">
+        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://maps.google.com/maps?width=2048&amp;height=434&amp;hl=en&amp;q=Japan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
+        <a href="https://embed-googlemap.com">google maps embed</a>
+    </div>
+    <style>.mapouter{position:relative;text-align:right;width:100%;height:434px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:434px;}.gmap_iframe {height:434px!important;}</style></div>
+
+    <video src="" controls autoplay loop></video>
+
+    <audio src="" controls autoplay loop></audio>
+
+    <figure style="border: 1px solid gray">
+        <img src="/alice-in-borderland.jpg" alt="">
+        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, itaque!</figcaption>
+    </figure>
+
+
+    <h1> HTML Canvas Example</h1>
+    <canvas class="canva" width="800" height="800" id="myCanvas" style="border:9px solid red;">
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.arc(410, 410, 10, 0, 2 * Math.PI);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(410, 2);
+            ctx.lineTo(410, 410);
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(730, 250);
+            ctx.lineTo(410, 410);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 7;
+            ctx.stroke();
+
+        </script>
+    </canvas>
+</body>
+</html>
