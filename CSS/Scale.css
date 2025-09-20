@@ -10,11 +10,6 @@
     margin: 150px auto;
 }
 
-body {
-    border: 1px solid green;
-    height: 90vh;
-}
-
 img {
     height: inherit;
     width: inherit;
@@ -23,6 +18,6 @@ img {
 }
 
 img:hover {
-    scale: 1;
+    scale: 1.5;
     transition: all 0.03s ease-in-out;
 }
