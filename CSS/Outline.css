@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    border: 2px solid gray;
+    margin: 10px;
+    padding: 10px;
+    outline: 2px;
+    outline-offset: 5px;
+    outline-style: solid;
+    outline-color: purple;
+}
+
+.button {
+      text-transform: capitalize;
+      padding: 10px 20px;
+      border: 2px solid red;         
+      border-radius: 30px;
+      background: linear-gradient(120deg, red, blue, yellow);
+      position: relative;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      top: -5px;  
+      bottom: -5px;
+      left: -10px;
+      right: -10px;
+      border-left: 4px solid purple;   
+      border-right: 4px solid purple;  
+      border-radius: 40px;
+      pointer-events: none;
+    }
+
