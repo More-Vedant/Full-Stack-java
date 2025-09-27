@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border: 1px solid red;
+    height: 100vh;
+}
+
+.container {
+    width: 60%;
+    gap: 5px;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.child {
+    width: 150px;
+    height: 150px;
+    background: purple;
+}

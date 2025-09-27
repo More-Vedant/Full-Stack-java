@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Task</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            gap: 4px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "child1 child2 child3"
+            "child4 child4  child5"
+            "child6 child7 .";
+            justify-self: center;
+            justify-items: center;
+            align-items: center;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background: purple;
+        }
+
+        .child4 {
+            width: 205px;
+        }
+    
+        
+.child1 {
+    grid-area: child1;
+}
+
+.child2 {
+    grid-area: child2;
+}
+
+.child3 {
+    grid-area: child3;
+}
+
+.child4 {
+    grid-area: child4;
+}
+
+.child5 {
+    grid-area: child5;
+}
+
+.child6 {
+    grid-area: child6;
+}
+
+.child7 {
+    grid-area: child7;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box child1"></div>
+        <div class="box child2"></div>
+        <div class="box child3"></div>
+        <div class="box child4"></div>
+        <div class="box child5"></div>
+        <div class="box child6"></div>
+        <div class="box child7"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 105px;
+            height: 50px;
+            border: 3px solid black;
+            background: rgb(6, 235, 6);
+        }
+
+        .mainContainer-1 {
+            margin: 10px;
+            padding: 10px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        .mainContainer-2 {
+            margin: 10px;
+            padding: 10px;
+            margin-left: 15px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+        .child-1,
+        .child-3, 
+        .child-5,
+        .child-7,
+        .child-11,
+        .child-13 {
+            width: 40px;
+        }
+
+        .child-2 {
+            flex-grow: 0.1;
+        }
+
+        .child-4,
+        .child-9 {
+            flex-grow: 0.1;
+        }
+
+        .child-6,
+        .child-8,
+        .child-10,
+        .child-12,
+        .child-14 {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mainContainer-1">
+        <div class="box child-1"></div>
+        <div class="box child-2"></div>
+        <div class="box child-3"></div>
+    </div>
+
+    <div class="mainContainer-2">
+        <div class="box child-4"></div>
+        <div class="box child-5"></div>
+        <div class="box child-6"></div>
+    </div>
+
+    <div class="mainContainer-2">
+        <div class="box child-7"></div>
+        <div class="box child-8"></div>
+        <div class="box child-9"></div>
+    </div>
+
+    <div class="mainContainer-2">
+        <div class="box child-10"></div>
+        <div class="box child-11"></div>
+        <div class="box child-12"></div>
+        <div class="box child-13"></div>
+        <div class="box child-14"></div>
+    </div>
+</body>
+</html>
