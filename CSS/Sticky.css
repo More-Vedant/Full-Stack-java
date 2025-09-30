@@ -1,0 +1,18 @@
+.child {
+    position: sticky;
+    top: 100px;
+    /* background: yellow;
+    border: 3px solid green; */
+}
+body {
+    height: 100vh;
+}
+.parent {
+    height: 100px;
+    background: lightgray;
+    border: 3px solid red;
+}
+.long-contant {
+    border: 3px solid purple;
+    position: relative;
+}

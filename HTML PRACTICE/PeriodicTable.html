@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            gap: 4px;
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            grid-template-areas:
+            "child1 . . . . . . . . . . . . . . . child2 child3"
+            "child4 child5 . . . . . . . . .  child6 child7 child8 child9 child10 child11 child12"
+            "child13 child14 . . . . . . . . .  child15 child16 child17 child18 child19 child20 child21"
+            "child22 child23 child24 child25 child26 child27 child28 child29 child30 child31 child32 child33 child34 child35 child36 child37 child38 child39"
+            "child40 child41 child42 child43 child44 child45 child46 child47 child48 child49 child50 child51 child52 child53 child54 child55 child56 child57"
+            "child58 child59 child60 child61 child62 child63 child64 child65 child66 child67 child68 child69 child70 child71 child72 child73 child74 child75"
+            "child76 child77 child78 child79 child80 child81 child82 child83 child84 child85 child86 child87 child88 child89 child90 child91 child92 child93"
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . . . . . . . . . . . . . ."
+            ". . . . . child94 child95 child96 child97 child98 child99 child100 child101 child102 child103 child104 child105 child106";
+            justify-self: center;
+            justify-items: center;
+            align-items: center;
+            background: linear-gradient(5deg, white, black);
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: green;
+        }
+        .Bluebox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: blue;
+        }
+        .Orangebox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: orangered;
+        }
+        .Yellowbox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: yellow;
+        }
+        .Greenbox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: greenyellow;
+        }
+        .Purplebox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: purple;
+        }
+        .Whitebox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: white;
+        }
+        .Voiletbox {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            background: violet;
+        }
+        
+        .child1 {
+        grid-area: child1;
+        }
+        .child2 {
+            grid-area: child2;
+        }
+        .child3 {
+            grid-area: child3;
+        }
+        .child4 {
+            grid-area: child4;
+        }
+        .child5 {
+            grid-area: child5;
+        }
+        .child6 {
+            grid-area: child6;
+        }
+        .child7 {
+            grid-area: child7;
+        }
+        .child8 {
+            grid-area: child8;
+        }
+        .child9 {
+            grid-area: child9;
+        }
+        .child10 {
+            grid-area: child10;
+        }
+        .child11 {
+            grid-area: child11;
+        }
+        .child12 {
+            grid-area: child12;
+        }
+        .child13 {
+            grid-area: child13;
+        }
+        .child14 {
+            grid-area: child14;
+        }
+        .child15 {
+            grid-area: child15;
+        }
+        .child16 {
+            grid-area: child16;
+        }
+        .child17 {
+            grid-area: child17;
+        }
+        .child18 {
+            grid-area: child18;
+        }
+        .child19 {
+            grid-area: child19;
+        }
+        .child20 {
+            grid-area: child20;
+        }
+        .child21 {
+            grid-area: child21;
+        }
+        .child22 {
+            grid-area: child22;
+        }
+        .child23 {
+            grid-area: child23;
+        }
+        .child24 {
+            grid-area: child24;
+        }
+        .child25 {
+            grid-area: child25;
+        }
+        .child26 {
+            grid-area: child26;
+        }
+        .child27 {
+            grid-area: child27;
+        }
+        .child28 {
+            grid-area: child28;
+        }
+        .child29 {
+            grid-area: child29;
+        }
+        .child30 {
+            grid-area: child30;
+        }
+        .child31 {
+            grid-area: child31;
+        }
+        .child32 {
+            grid-area: child32;
+        }
+        .child33 {
+            grid-area: child33;
+        }
+        .child34 {
+            grid-area: child34;
+        }
+        .child35 {
+            grid-area: child35;
+        }
+        .child36 {
+            grid-area: child36;
+        }
+        .child37 {
+            grid-area: child37;
+        }
+        .child38 {
+            grid-area: child38;
+        }
+        .child39 {
+            grid-area: child39;
+        }
+        .child40 {
+            grid-area: child40;
+        }
+        .child41 {
+            grid-area: child41;
+        }
+        .child42 {
+            grid-area: child42;
+        }
+        .child43 {
+            grid-area: child43;
+        }
+        .child44 {
+            grid-area: child44;
+        }
+        .child45 {
+            grid-area: child45;
+        }
+        .child46 {
+            grid-area: child46;
+        }
+        .child47 {
+            grid-area: child47;
+        }
+        .child48 {
+            grid-area: child48;
+        }
+        .child49 {
+            grid-area: child49;
+        }
+        .child50 {
+            grid-area: child50;
+        }
+        .child51 {
+            grid-area: child51;
+        }
+        .child52 {
+            grid-area: child52;
+        }
+        .child53 {
+            grid-area: child53;
+        }
+        .child54 {
+            grid-area: child54;
+        }
+        .child55 {
+            grid-area: child55;
+        }
+        .child56 {
+            grid-area: child56;
+        }
+        .child57 {
+            grid-area: child57;
+        }
+        .child58 {
+            grid-area: child58;
+        }
+        .child59 {
+            grid-area: child59;
+        }
+        .child60 {
+            grid-area: child60;
+        }
+        .child61 {
+            grid-area: child61;
+        }
+        .child62 {
+            grid-area: child62;
+        }
+        .child63 {
+            grid-area: child63;
+        }
+        .child64 {
+            grid-area: child64;
+        }
+        .child65 {
+            grid-area: child65;
+        }
+        .child66 {
+            grid-area: child66;
+        }
+        .child67 {
+            grid-area: child67;
+        }
+        .child68 {
+            grid-area: child68;
+        }
+        .child69 {
+            grid-area: child69;
+        }
+        .child70 {
+            grid-area: child70;
+        }
+        .child71 {
+            grid-area: child71;
+        }
+        .child72 {
+            grid-area: child72;
+        }
+        .child73 {
+            grid-area: child73;
+        }
+        .child74 {
+            grid-area: child74;
+        }
+        .child75 {
+            grid-area: child75;
+        }
+        .child76 {
+            grid-area: child76;
+        }
+        .child77 {
+            grid-area: child77;
+        }
+        .child78 {
+            grid-area: child78;
+        }
+        .child79 {
+            grid-area: child79;
+        }
+        .child80 {
+            grid-area: child80;
+        }
+        .child81 {
+            grid-area: child81;
+        }
+        .child82 {
+            grid-area: child82;
+        }
+        .child83 {
+            grid-area: child83;
+        }
+        .child84 {
+            grid-area: child84;
+        }
+        .child85 {
+            grid-area: child85;
+        }
+        .child86 {
+            grid-area: child86;
+        }
+        .child87 {
+            grid-area: child87;
+        }
+        .child88 {
+            grid-area: child88;
+        }
+        .child89 {
+            grid-area: child89;
+        }
+        .child90 {
+            grid-area: child90;
+        }
+        .child91 {
+            grid-area: child91;
+        }
+        .child92 {
+            grid-area: child92;
+        }
+        .child93 {
+            grid-area: child93;
+        }
+        .child94 {
+            grid-area: child94;
+        }
+        .child95 {
+            grid-area: child95;
+        }
+        .child96 {
+            grid-area: child96;
+        }
+        .child97 {
+            grid-area: child97;
+        }
+        .child98 {
+            grid-area: child98;
+        }
+        .child99 {
+            grid-area: child99;
+        }
+        .child100 {
+            grid-area: child100;
+        }
+        .child101 {
+            grid-area: child101;
+        }
+        .child102 {
+            grid-area: child102;
+        }
+        .child103 {
+            grid-area: child103;
+        }
+        .child104 {
+            grid-area: child104;
+        }
+        .child105 {
+            grid-area: child105;
+        }
+        .child106 {
+            grid-area: child106;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box child1"></div>
+        <div class="Orangebox child2"></div>
+        <div class="Orangebox child3"></div>
+
+        <div class="Bluebox child4"></div>
+        <div class="Yellowbox child5"></div>
+        <div class="Greenbox child6"></div>
+        <div class="Greenbox child7"></div>
+        <div class="Purplebox child8"></div>
+        <div class="Purplebox child9"></div>
+        <div class="Purplebox child10"></div>
+        <div class="Orangebox child11"></div>
+        <div class="Orangebox child12"></div>
+
+        <div class="Bluebox child13"></div>
+        <div class="Yellowbox child14"></div>
+        <div class="Greenbox child15"></div>
+        <div class="Greenbox child16"></div>
+        <div class="Purplebox child17"></div>
+        <div class="Purplebox child18"></div>
+        <div class="Purplebox child19"></div>
+        <div class="Orangebox child20"></div>
+        <div class="Orangebox child21"></div>
+
+        <div class="Bluebox child22"></div>
+        <div class="Yellowbox child23"></div>
+        <div class="Yellowbox child24"></div>
+        <div class="Yellowbox child25"></div>
+        <div class="Yellowbox child26"></div>
+        <div class="Yellowbox child27"></div>
+        <div class="Yellowbox child28"></div>
+        <div class="Orangebox child29"></div>
+        <div class="Orangebox child30"></div>
+        <div class="Orangebox child31"></div>
+        <div class="Orangebox child32"></div>
+        <div class="Greenbox child33"></div>
+        <div class="Greenbox child34"></div>
+        <div class="Purplebox child35"></div>
+        <div class="Purplebox child36"></div>
+        <div class="Purplebox child37"></div>
+        <div class="Whitebox child38"></div>
+        <div class="Orangebox child39"></div>
+
+        <div class="Bluebox child40"></div>
+        <div class="Yellowbox child41"></div>
+        <div class="Yellowbox child42"></div>
+        <div class="Yellowbox child43"></div>
+        <div class="Yellowbox child44"></div>
+        <div class="Yellowbox child45"></div>
+        <div class="Yellowbox child46"></div>
+        <div class="Orangebox child47"></div>
+        <div class="Orangebox child48"></div>
+        <div class="Orangebox child49"></div>
+        <div class="Orangebox child50"></div>
+        <div class="Greenbox child51"></div>
+        <div class="Greenbox child52"></div>
+        <div class="Greenbox child53"></div>
+        <div class="Purplebox child54"></div>
+        <div class="Purplebox child55"></div>
+        <div class="Whitebox child56"></div>
+        <div class="Orangebox child57"></div>
+
+        <div class="Bluebox child58"></div>
+        <div class="Bluebox child59"></div>
+        <div class="Yellowbox child60"></div>
+        <div class="Yellowbox child61"></div>
+        <div class="Yellowbox child62"></div>
+        <div class="Yellowbox child63"></div>
+        <div class="Yellowbox child64"></div>
+        <div class="Yellowbox child65"></div>
+        <div class="Orangebox child66"></div>
+        <div class="Orangebox child67"></div>
+        <div class="Orangebox child68"></div>
+        <div class="Greenbox child69"></div>
+        <div class="Greenbox child70"></div>
+        <div class="Greenbox child71"></div>
+        <div class="Purplebox child72"></div>
+        <div class="Purplebox child73"></div>
+        <div class="Whitebox child74"></div>
+        <div class="Orangebox child75"></div>
+
+        <div class="Bluebox child76"></div>
+        <div class="Bluebox child77"></div>
+        <div class="Yellowbox child78"></div>
+        <div class="Yellowbox child79"></div>
+        <div class="Yellowbox child80"></div>
+        <div class="Yellowbox child81"></div>
+        <div class="Yellowbox child82"></div>
+        <div class="Yellowbox child83"></div>
+        <div class="Orangebox child84"></div>
+        <div class="Orangebox child85"></div>
+        <div class="Orangebox child86"></div>
+        <div class="Greenbox child87"></div>
+        <div class="Greenbox child88"></div>
+        <div class="Greenbox child89"></div>
+        <div class="Purplebox child90"></div>
+        <div class="Purplebox child91"></div>
+        <div class="Whitebox child92"></div>
+        <div class="Orangebox child93"></div>
+
+        <div class="Voiletbox child94"></div>
+        <div class="Voiletbox child95"></div>
+        <div class="Voiletbox child96"></div>
+        <div class="Voiletbox child97"></div>
+        <div class="Voiletbox child98"></div>
+        <div class="Voiletbox child99"></div>
+        <div class="Voiletbox child100"></div>
+        <div class="Voiletbox child101"></div>
+        <div class="Voiletbox child102"></div>
+        <div class="Voiletbox child103"></div>
+        <div class="Voiletbox child104"></div>
+        <div class="Voiletbox child105"></div>
+        <div class="Voiletbox child106"></div>
+    </div>
+</body>
+</html>
