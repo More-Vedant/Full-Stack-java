@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.combinator > h1 {
+    color: red;
+}
+
+li {
+    list-style-type: disc;
+}
+
+li li {
+    list-style-type: circle;
+}
+
+p ~ span {
+    color: blue;
+}
+
+li:first-of-type + li {
+    color: purple;
+    font-weight: bold;
+    border: 3px dashed green;
+}
+
+p > b + br + i {
+    color: gold;
+    background: silver;
+}
+
+.example {
+    font-family: system-ui;
+    font-size: 1,2rem;
+    & > a {
+        color: tomato;
+        &:hover,
+        &:focus {
+            color: ivory;
+            background-color: tomato;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-size: 67px;
+    background: radial-gradient(circle, orange,blue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 25px solid transparent;
+    padding: 15px;
+    border-image: url(https://png.pngtree.com/png-vector/20230515/ourmid/pngtree-luxury-golden-rectangle-corner-certificate-border-pattern-line-photo-frame-islamic-vector-png-image_7098529.png)
+    80 round;
+}
