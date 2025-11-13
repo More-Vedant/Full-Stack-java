@@ -9,3 +9,16 @@
 // console.log(Math.floor(num));
 // console.log(Math.ceil(num));
 
+
+// console.log(Math.max(25,78,13,56));
+
+
+// console.log(Math.min(-12,-5,0,8,3));
+
+
+// let num = 121;
+// let ans = Math.sqrt(num);
+// console.log(ans); 
+
+
+console.log(Math.cbrt(64));
