@@ -21,4 +21,5 @@
 // console.log(ans); 
 
 
-console.log(Math.cbrt(64));
+
+// console.log(Math.cbrt(64));
