@@ -11,17 +11,43 @@
 // console.log("ans", ans);
 
 
+// let arr = [1,2,3,4];
+
+// Array.prototype.ढकल = function (...value) {
+//     let index = this.length;
+//     console.log(index);
+
+//     for(let i=0;i<value.length;i++){
+//         this[index+i] = value[i];
+//     }
+//     return arr;
+// };
+
+// let ans = arr.ढकल(5,6,7);
+// console.log("ans",ans);
+
+
 let arr = [1,2,3,4];
 
-Array.prototype.ढकल = function (...value) {
-    let index = this.length;
-    console.log(index);
+Array.prototype.लांबी = function () {
+    let jhola = 0;
 
-    for(let i=0;i<value.length;i++){
-        this[index+i] = value[i];
-    }
-    return arr;
+    this.map((_, i) => {
+        jhola++;
+    });
+    return jhola;
 };
 
-let ans = arr.ढकल(5,6,7);
-console.log("ans",ans);
+let ans1 = arr.लांबी();
+
+Array.prototype.काढा = function () {
+    let last_index = this.लांबी() -1;
+
+    delete this [last_index];
+    console.log("arr",this);
+    return this.filter((el)=> el != null);
+};
+arr.काढा();
+let anss=arr.काढा();
+
+console.log(anss);
