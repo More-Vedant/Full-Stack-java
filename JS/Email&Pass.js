@@ -22,7 +22,7 @@ function myFunctions(e) {
         if (pass.trim() == '') {
             console.log('Please Enter the Value..');
         }
-        else if (pass.length > 8 && pass.length > 20) {
+        else if (pass.length < 8 || pass.length > 20) {
             console.log('Please Enter the Correct Length..');
         }
         else {
