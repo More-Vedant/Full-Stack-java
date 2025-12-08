@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "vedant",
       "age": 21,
       "pass": "ved21"
@@ -9,8 +9,26 @@
   ],
   "todos": [
     {
-      "id": 1,
+      "id": "1",
       "text": "learn json",
+      "isEdit": false,
+      "isComplete": false
+    },
+    {
+      "id": "2",
+      "text": "learn js",
+      "isEdit": false,
+      "isComplete": false
+    },
+    {
+      "id": "3",
+      "text": "learn css",
+      "isEdit": false,
+      "isComplete": false
+    },
+    {
+      "id": "4",
+      "text": "learn html",
       "isEdit": false,
       "isComplete": false
     }
