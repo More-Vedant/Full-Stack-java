@@ -10,31 +10,19 @@
   "todos": [
     {
       "id": "1",
-      "text": "learn json",
+      "text": "Learn HTML",
       "isEdit": false,
       "isComplete": false
     },
     {
       "id": "2",
-      "text": "learn js",
+      "text": "Learn CSS",
       "isEdit": false,
       "isComplete": false
     },
     {
       "id": "3",
-      "text": "learn css",
-      "isEdit": false,
-      "isComplete": false
-    },
-    {
-      "id": "4",
-      "text": "learn html",
-      "isEdit": false,
-      "isComplete": false
-    },
-    {
-      "id": "5",
-      "text": "learn",
+      "text": "Learn JS",
       "isEdit": false,
       "isComplete": false
     }
