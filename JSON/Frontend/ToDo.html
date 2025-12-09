@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
+    <style>
+        .myTodo_Div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+    </style>
 </head>
 <body onload="fetchTodoDB()">
     <h1>curd todo with json-server</h1>
@@ -12,6 +20,8 @@
         <div class="input_div">
             <input autocomplete="off" id="todos" placeholder="enter the todos" type="text">
             <button type="button" onclick="myTodosAdd()" class="bg_primary">Add</button>
+            <button type="button" id="selectAll" class="bg-primary">Select All</button>
+            <button type="button" id="DeSelectAll" class="bg-primary">Deselect All</button>
         </div>
         <div id="dataInfo"></div>
     </div>
