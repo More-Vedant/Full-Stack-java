@@ -1,0 +1,93 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page </title>
+    <!-- <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    padding: 40px;
+}
+
+.loginPage,
+.signupPage{
+    width: 350px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label{
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus{
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.button{
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover{
+    background: #357ac8;
+}
+</style> -->
+</head>
+<body>
+    <button onclick="">Back</button>
+     <div class="mainContainer">
+        <div class="signupPage">
+            <h1>SignUp</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Name...." name="signUsername" id="signUsername" autocomplete="off">
+            <label>Age</label>
+            <input type="number" placeholder="Enter your Age....." name="signAge" id="SignAge" autocomplete="off">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" name="signPassword" id="signPassword" autocomplete="off">
+            <button class="button" type="button" onclick="signUp()">Submit</button>
+
+            <p id="signupError" style="color:red;"></p>
+            <p id="signupSuccess" style="color:green;"></p>
+        </div>
+    </div>
+</body>
+<script src="../JS/SignUp.js"></script>
