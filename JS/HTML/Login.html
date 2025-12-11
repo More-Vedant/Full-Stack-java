@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="">
 </head>
+
 <body>
-    
+
+    <button onclick="window.location='../ls/index.html'">back</button>
+    <div class="mainContainer">
+
+        <div class="loginPage">
+            <h1>Login</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Name...." name="loginUsername" id="loginUsername"
+                autocomplete="off">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" name="Loginpassword" id="Loginpassword"
+                autocomplete="off">
+
+            <button class="button" type="button" onclick="login()">Submit</button>
+            <p id="loginError" style="color:red;"></p>
+        </div>
+
+    </div>
+
 </body>
+
+<script src="../js/Login.js"></script>
+
 </html>
