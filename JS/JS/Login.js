@@ -29,6 +29,9 @@ const Login = () => {
     setTimeout(() => {
       alert('token has been stored in session storage');
     }, 1000);
-  }
-  alert("user coudnt't found!");
+    
+  } else {
+    alert("user coudnt't found!");
+}
+  
 };
