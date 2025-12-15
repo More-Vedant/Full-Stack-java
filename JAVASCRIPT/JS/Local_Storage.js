@@ -27,6 +27,7 @@ function dataAppend(value) {
         const description = document.createElement('h3');
         const price = document.createElement('h3');
         const category = document.createElement('h3');
+        const AddtoCart=document.createElement('button')
 
         id.innerText = el.id;
 
@@ -39,6 +40,8 @@ function dataAppend(value) {
         price.innerText = el.price;
 
         category.innerText = el.category;
+
+        AddtoCart.innerText='Add'
 
         childDiv.append(id,img,title,description,price,category);
         mainDiv.append(childDiv);
