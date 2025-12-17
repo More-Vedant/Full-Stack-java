@@ -1,0 +1,126 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    background: #ffffff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Header */
+thead {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+thead th {
+    padding: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Table Body */
+tbody td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Product Image */
+tbody img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Action Buttons */
+tbody button {
+    border: none;
+    padding: 6px 10px;
+    margin: 0 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #dee2e6;
+}
+
+tbody button:hover {
+    background-color: #ced4da;
+}
+
+/* Icons */
+tbody i {
+    font-size: 14px;
+}
+
+/* Price column */
+tbody td:last-child {
+    font-weight: bold;
+    color: #198754;
+}
+.cart-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Keep table wider */
+.cart-table {
+    width: 70%;
+}
+
+/* Total box */
+.total-box {
+    width: 30%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.total-box h4 {
+    margin-bottom: 10px;
+}
+
+.total-box p,
+.total-box h5 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.total-box h5 {
+    color: #198754;
+    margin-top: 10px;
+}
+
+/* Checkout button */
+.checkout-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #157347;
+}
