@@ -9,12 +9,12 @@ export const Navbar=()=>{
         <li>Contact</li>
     </ul>
     <ul>
-        <li onclick="window.location='./pages/cart.html'" style="position:relative; cursor:pointer;">
+        <li onclick="window.location='./pages/Cart.html'" style="position:relative; cursor:pointer;">
             <i class="bi bi-cart" style="font-size:22px;"></i>
             <span id="cartCount" class="cart-badge">0</span>
         </li>
-        <li onclick="window.location='./pages/login.html'">Login</li>
-        <li onclick="window.location='pages/signUp.html'">SignUp</li>
+        <li onclick="window.location='./pages/Login.html'">Login</li>
+        <li onclick="window.location='pages/SignUp.html'">SignUp</li>
     </ul>
     `
 }

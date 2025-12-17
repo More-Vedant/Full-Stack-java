@@ -1,3 +1,3 @@
 export const Footer=()=>{
-    return `<p> Tauheed || Hey..... </p>`
+    return `<p> Vedant || Hey..... </p>`
 }
