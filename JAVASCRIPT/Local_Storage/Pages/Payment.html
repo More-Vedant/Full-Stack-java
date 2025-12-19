@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../CSS/Payment.css">
+</head>
+<body>
+    <h1>Payment Method</h1>
+
+    <div class="container">
+        <div class="payment-option" onclick="selectPayment(this)">Visa</div>
+        <div class="payment-option" onclick="selectPayment(this)">MasterCard</div>
+        <div class="payment-option" onclick="selectPayment(this)">PayPal</div>
+        <div class="payment-option" onclick="selectPayment(this)">Paytm</div>
+        <div class="payment-option" onclick="selectPayment(this)">Stripe</div>
+
+        <button id="continueBtn" disabled onclick="completePayment()">Continue</button>
+    </div>
+
+    <script src="../JS/Payment.js"></script>
+</body>
+</html>
