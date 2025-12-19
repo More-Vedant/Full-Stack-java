@@ -1,11 +1,11 @@
 const API=`https://fakestoreapi.com/products`
 
-let cartData=JSON.parse(localStorage.getItem('cartData'))||[];
+let cartData = JSON.parse(localStorage.getItem('cartData'))||[];
 
 async function ApiCall() {
     try {
-        const res=await fetch(API)
-        const data=await res.json()
+        const res = await fetch(API)
+        const data = await res.json()
 
         dataAppend(data)
     } catch (error) {
@@ -19,24 +19,24 @@ window.onload = function () {
 ApiCall()
 
 function dataAppend(value){
-    const mainDiv =document.querySelector('#mainData');
+    const mainDiv = document.querySelector('#mainData');
 
     value?.forEach((el) => {
-        const childDiv=document.createElement('div');
-        const id=document.createElement('h3');
-        const img=document.createElement('img');
-        const title=document.createElement('h3');
-        const description=document.createElement('h3');
-        const price=document.createElement('h3');
-        const category=document.createElement('h3');
-        const addBtn=document.createElement('button')
-        const plusBtn=document.createElement('button')
-        const minusBtn=document.createElement('button')
-        const qty=document.createElement('span')
+        const childDiv = document.createElement('div');
+        const id = document.createElement('h3');
+        const img = document.createElement('img');
+        const title = document.createElement('h3');
+        const description = document.createElement('h3');
+        const price = document.createElement('h3');
+        const category = document.createElement('h3');
+        const addBtn = document.createElement('button')
+        const plusBtn = document.createElement('button')
+        const minusBtn = document.createElement('button')
+        const qty = document.createElement('span')
 
-        plusBtn.style='display:none'
-        minusBtn.style='display:none'
-        qty.style='display:none'
+        plusBtn.style = 'display:none'
+        minusBtn.style = 'display:none'
+        qty.style = 'display:none'
 
         plusBtn.innerText='+'
         minusBtn.innerText='-'
@@ -108,4 +108,18 @@ function dataAppend(value){
         childDiv.append(id,img,title,description,price,category,addBtn,plusBtn,qty,minusBtn);
         mainDiv.append(childDiv)
     });
+}
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cartData")) || [];
+
+    let totalQty = 0;
+    cart.forEach(item => {
+        totalQty += Number(item.qty) || 0;
+    });
+
+    const badge = document.getElementById("cartCount");
+    if (!badge) return;
+
+    badge.innerText = totalQty;
+    badge.style.display = totalQty > 0 ? "inline-block" : "none";
 }
