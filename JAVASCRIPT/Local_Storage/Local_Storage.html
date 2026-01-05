@@ -20,34 +20,12 @@
 </body>
 <script src="Local_Storage.js"></script>
 <script type="module">
-    import {Navbar} from '../Components/Navbar.js'
+    import {Navbar} from './Components/Navbar.js'
     document.querySelector("#navbar").innerHTML=Navbar()
 
-    import {Footer} from '../Components/Footer.js'
+    import {Footer} from './Components/Footer.js'
     document.querySelector('#footer').innerHTML=Footer()
-
-    function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem("cartData")) || [];
-
-    let totalQty = 0;
-    cart.forEach(item => {
-        totalQty += Number(item.qty) || 0;
-    });
-
-    const badge = document.getElementById("cartCount");
-    if (!badge) return;
-
-    badge.innerText = totalQty;
-    badge.style.display = totalQty > 0 ? "inline-block" : "none";
-}
-
-// 🔥 IMPORTANT: run AFTER navbar is loaded
-window.addEventListener("DOMContentLoaded", () => {
-    updateCartCount();
-});
-
-// 🔥 Sync if cart updates in another page/tab
-window.addEventListener("storage", updateCartCount);
-
 </script>
 </html>
+
+//after long time//
