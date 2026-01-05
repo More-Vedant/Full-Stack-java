@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
-    <link rel="stylesheet" href="../CSS/Payment.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+
+  <link rel="stylesheet" href="../CSS/Payment.css">
 </head>
 <body>
-    <h1>Payment Method</h1>
 
-    <div class="container">
-        <div class="payment-option" onclick="selectPayment(this)">Visa</div>
-        <div class="payment-option" onclick="selectPayment(this)">MasterCard</div>
-        <div class="payment-option" onclick="selectPayment(this)">PayPal</div>
-        <div class="payment-option" onclick="selectPayment(this)">Paytm</div>
-        <div class="payment-option" onclick="selectPayment(this)">Stripe</div>
+<nav id="navbar"></nav>
+<button id="btn" onclick="goBack()">Back</button>
+<h1>Payment Method</h1>
+<div class="container">
 
-        <button id="continueBtn" disabled onclick="completePayment()">Continue</button>
-    </div>
+  <div class="payment-option" onclick="selectPayment(this)">Visa</div>
+  <div class="payment-option" onclick="selectPayment(this)">MasterCard</div>
+  <div class="payment-option" onclick="selectPayment(this)">PayPal</div>
+  <div class="payment-option" onclick="selectPayment(this)">Apple Pay</div>
+  <div class="payment-option" onclick="selectPayment(this)">Stripe</div>
 
-    <script src="../JS/Payment.js"></script>
+  <button id="continueBtn" disabled onclick="completePayment()">Continue</button>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="../JS/Payment.js"></script>
+
+<script type="module">
+    import {Navbar} from './Components/Navbar.js'
+    document.querySelector("#navbar").innerHTML=Navbar()
+
+    import {Footer} from './Components/Footer.js'
+    document.querySelector('#footer').innerHTML=Footer()
+</script>
+
 </body>
 </html>
