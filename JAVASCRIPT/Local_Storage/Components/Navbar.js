@@ -8,6 +8,7 @@ export const Navbar=()=>{
         <li>Products</li>
         <li>Contact</li>
     </ul>
+
     <ul>
         <li onclick="window.location='./pages/Cart.html'" style="position:relative; cursor:pointer;">
             <i class="bi bi-cart" style="font-size:22px;"></i>

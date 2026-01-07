@@ -33,7 +33,7 @@ function myTodosAdd() {
         .finally(() => console.log('done with api process'));
 }
 
-function fetchTodoDB() {
+function fetchToDoDB() {
     fetch(API)
         .then((res) => res.json())
         .then((res) => data = res)
