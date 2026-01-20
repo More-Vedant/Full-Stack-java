@@ -1,0 +1,13 @@
+class Car {
+    constructor(n, b) {
+        this.name = n;
+        this.brand = b;
+    }
+    showDetails() {
+        console.log(`${this.name} ${this.brand}`);
+    }
+}
+
+let c1 = new Car('desire', 'suzuki');
+console.log(c1);
+console.log(c1.showDetails());
