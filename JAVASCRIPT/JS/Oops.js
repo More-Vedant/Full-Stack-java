@@ -28,3 +28,25 @@ class miniSUV extends SUV {
 
 let car2 = new miniSUV("audi q3", "audi");
 console.log(car2);
+
+class Cars {
+    #count; //private variable you cannot access out side of it.
+    constructor(n, b) {
+        this.name = n;
+        this.brand = b;
+        this.#count = 100;
+    }
+
+    showDetails() {
+        console.log(`${this.name} ${this.brand} ${this.#count}`);
+    }
+
+    getCount(){
+        return this.#count; //getter methods to access private fields.
+    }
+}
+
+let c11 = new Cars("Thar", "Mahindra");
+
+console.log(c11, "this is the encapsulation"); //wont show count
+console.log(c11.getCount()); //now we can see the private value (100)
