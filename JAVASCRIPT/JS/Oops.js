@@ -50,3 +50,53 @@ let c11 = new Cars("Thar", "Mahindra");
 
 console.log(c11, "this is the encapsulation"); //wont show count
 console.log(c11.getCount()); //now we can see the private value (100)
+
+
+// abstraction
+
+let amounts = process.argv[2];
+console.log(amounts);
+
+class BankAccount {
+    #balance;
+    #pin;
+
+    constructor(accountHolder) {
+        this.accountHolder = accountHolder;
+        this.#balance = 0;
+        this.#pin = '1234'
+    }
+
+    deposit(amount) {
+        if (amount > 0) {
+            this. #balance += amount;
+            console.log(`Deposited ${amount}`);
+        } else {
+            console.log('Invalid deposite amount');
+        }
+    }
+
+    withdraw(amount) {
+        if (amount <= this.#balance) {
+            this.#balance -= amount;
+            console.log(`Withdrawn ${amount}`);
+        } else {
+            console.log('Insufficient balance');
+        }
+    }
+
+    checkBalance(userPin) {
+        if (userPin == this.#pin) {
+            return `Current balance: ${this.#balance}`
+        } else {
+            console.log(`Invalid Pin ${userPin}`);
+        }
+    }
+}
+
+const account = new BankAccount('Vedant');
+
+account.deposit(amounts);
+account.withdraw(400);
+let checkBal = account.checkBalance(1234);
+console.log(checkBal);
