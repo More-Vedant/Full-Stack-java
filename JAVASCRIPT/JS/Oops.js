@@ -100,3 +100,57 @@ account.deposit(amounts);
 account.withdraw(400);
 let checkBal = account.checkBalance(1234);
 console.log(checkBal);
+
+
+//Pollymorphism
+
+class Vehicle {
+    run() {
+        console.log('Vehicle is running')
+    }
+}
+
+class car1 {
+    run() {
+        console.log('Car is running')
+    }
+}
+
+class Truck {
+    run() {
+        console.log('Truck is running')
+    }
+}
+
+let v1 = new Vehicle();
+let v2 = new car1();
+let v3 = new Truck();
+
+
+class Animal {
+    speak() {
+        console.log('Animal speaks');
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log('Dog Barks');
+    }
+}
+
+class Cat extends Animal {
+    speak() {
+        console.log('Cat Meows');
+    }
+}
+
+function makeSound(animal) {
+    animal.speak();
+}
+
+let dog = new Dog();
+let cat = new Cat();
+
+makeSound(dog);
+makeSound(cat);
