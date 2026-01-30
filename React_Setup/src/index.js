@@ -1,7 +1,10 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom/client';
 
-import { App } from './';
+import {App} from './App'
 
-ReactDOM.createRoot(document.getElemntById)
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <>
+        <App/>
+    </>,
+)
