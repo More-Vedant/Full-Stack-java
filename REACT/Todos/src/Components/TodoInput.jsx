@@ -11,7 +11,7 @@ export const TodoInput = () => {
         const data = {
             id: Date.now(),
             text,
-            isEdits: false,
+            isEdit: false,
             isCompleted: false,
         };
 

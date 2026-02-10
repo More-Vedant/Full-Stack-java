@@ -10,34 +10,64 @@ export const Todos = ({ props }) => {
     setTodo(deleteItems);
   };
 
-  const handleEdits = (id) => {
+  const handleEdit = (id) => {
     const editItems = todo.map((el) =>
-      el.id === id ? { ...el, isEdit: true } : el,
+      el.id === id ? { ...el, isEdit: true } : el
     );
     setTodo(editItems);
   };
 
   const handleCancel = (id) => {
     const editItems = todo.map((el) =>
-      el.id === id ? { ...el, isEdit: false } : el,
+      el.id === id ? { ...el, isEdit: false } : el
     );
     setTodo(editItems);
   };
 
   const handleConfirm = (id) => {
     if (editText.trim() === '') return;
+
     const editItems = todo.map((el) =>
-      el.id === id ? { ...el, isEdit: false, text: editText } : el,
+      el.id === id
+        ? { ...el, isEdit: false, text: editText }
+        : el
     );
+
     setTodo(editItems);
   };
+
+  
+  const handleToggle = (id) => {
+    const updated = todo.map((el) =>
+      el.id === id
+        ? { ...el, isCompleted: !el.isCompleted }
+        : el
+    );
+    setTodo(updated);
+  };
+
+ 
+  const handleSelectAll = () => {
+    const allSelected =
+      todo.length > 0 && todo.every((el) => el.isCompleted);
+
+    const updated = todo.map((el) => ({
+      ...el,
+      isCompleted: !allSelected,
+    }));
+
+    setTodo(updated);
+  };
+
   return (
     <>
       <h1>list of todos</h1>
 
-      {/* {
-        todo && 
-      } */}
+      <button onClick={handleSelectAll}>
+        {todo.length > 0 && todo.every((el) => el.isCompleted)
+          ? 'Unselect All'
+          : 'Select All'}
+      </button>
 
       {todo.map((el) => {
         return (
@@ -51,7 +81,11 @@ export const Todos = ({ props }) => {
               margin: 'auto',
             }}
           >
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={Boolean(el.isCompleted)}
+              onChange={() => handleToggle(el.id)}
+            />
 
             {el.isEdit ? (
               <input
@@ -66,31 +100,19 @@ export const Todos = ({ props }) => {
 
             {el.isEdit ? (
               <>
-                <button
-                  onClick={() => handleCancel(el.id)}
-                  style={{ height: 'fit-content' }}
-                >
+                <button onClick={() => handleCancel(el.id)}>
                   cancel
                 </button>
-                <button
-                  onClick={() => handleConfirm(el.id)}
-                  style={{ height: 'fit-content' }}
-                >
+                <button onClick={() => handleConfirm(el.id)}>
                   confirm
                 </button>
               </>
             ) : (
               <>
-                <button
-                  onClick={() => handleEdits(el.id)}
-                  style={{ height: 'fit-content' }}
-                >
+                <button onClick={() => handleEdit(el.id)}>
                   edit
                 </button>
-                <button
-                  onClick={() => handleDelete(el.id)}
-                  style={{ height: 'fit-content' }}
-                >
+                <button onClick={() => handleDelete(el.id)}>
                   delete
                 </button>
               </>
