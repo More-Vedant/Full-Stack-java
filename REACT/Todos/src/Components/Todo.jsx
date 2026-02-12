@@ -36,7 +36,6 @@ export const Todos = ({ props }) => {
     setTodo(editItems);
   };
 
-  
   const handleToggle = (id) => {
     const updated = todo.map((el) =>
       el.id === id
@@ -46,7 +45,6 @@ export const Todos = ({ props }) => {
     setTodo(updated);
   };
 
- 
   const handleSelectAll = () => {
     const allSelected =
       todo.length > 0 && todo.every((el) => el.isCompleted);
@@ -59,6 +57,14 @@ export const Todos = ({ props }) => {
     setTodo(updated);
   };
 
+  
+  const handleDeleteAll = () => {
+    const remainingTodos = todo.filter(
+      (el) => !el.isCompleted
+    );
+    setTodo(remainingTodos);
+  };
+
   return (
     <>
       <h1>list of todos</h1>
@@ -67,6 +73,11 @@ export const Todos = ({ props }) => {
         {todo.length > 0 && todo.every((el) => el.isCompleted)
           ? 'Unselect All'
           : 'Select All'}
+      </button>
+
+      
+      <button onClick={handleDeleteAll}>
+        Delete Selected
       </button>
 
       {todo.map((el) => {
@@ -92,27 +103,45 @@ export const Todos = ({ props }) => {
                 name="edit_items"
                 type="text"
                 defaultValue={el.text}
-                onChange={(e) => setEditText(e.target.value)}
+                onChange={(e) =>
+                  setEditText(e.target.value)
+                }
               />
             ) : (
-              <h1>{el.text}</h1>
+              <h1
+                style={{
+                  textDecoration: el.isCompleted
+                    ? 'line-through'
+                    : 'none',
+                }}
+              >
+                {el.text}
+              </h1>
             )}
 
             {el.isEdit ? (
               <>
-                <button onClick={() => handleCancel(el.id)}>
+                <button
+                  onClick={() => handleCancel(el.id)}
+                >
                   cancel
                 </button>
-                <button onClick={() => handleConfirm(el.id)}>
+                <button
+                  onClick={() => handleConfirm(el.id)}
+                >
                   confirm
                 </button>
               </>
             ) : (
               <>
-                <button onClick={() => handleEdit(el.id)}>
+                <button
+                  onClick={() => handleEdit(el.id)}
+                >
                   edit
                 </button>
-                <button onClick={() => handleDelete(el.id)}>
+                <button
+                  onClick={() => handleDelete(el.id)}
+                >
                   delete
                 </button>
               </>
