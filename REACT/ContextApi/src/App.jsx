@@ -1,6 +1,6 @@
 import { Counter } from './Components/Counter';
 import { Button } from './Components/Button';
-import { Dummy } from './Components/Dummy'
+import { Dummy } from './Components/Dummy';
 
 export const App = () => {
   return (
