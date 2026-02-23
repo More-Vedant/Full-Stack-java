@@ -1,4 +1,6 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthValContext } from '../Context/AuthProvider';
 
 export const Navbar = () => {
     const data =[
@@ -6,6 +8,8 @@ export const Navbar = () => {
         { to: '/about', name: 'about'},
         { to: '/counter', name: 'counter'},
         { to: '/todo', name: 'todo'},
+        { to: '/user', name: 'user'},
+        { to: '/login', name: 'login'},
     ];
 
     return (
@@ -36,6 +40,7 @@ export const Navbar = () => {
                             </NavLink>
                     );
                 })}
+                <button onClick={() => setAuth(false)}> logout </button>
             </div>
     );
 };
