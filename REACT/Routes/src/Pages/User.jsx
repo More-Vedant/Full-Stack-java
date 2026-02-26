@@ -1,47 +1,98 @@
-import React from "react";
-import { getData } from '../Api/'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext } from 'react';
+
+import { getData } from '../Api/FetchData';
+import { Link, useSearchParams } from 'react-router-dom';
+
+import { AuthValContext } from '../Context/AuthProvider';
+
+const CalcPageVal = (val) => {
+  let vals = +val;
+
+  if (typeof vals === 'number' && vals <= 0 && !vals) {
+    return (vals = 1);
+  }
+  return vals;
+};
 
 export const User = () => {
-    const [user, setUser] = React.useState([]);
+  const { loading, setLoading, error, setError } = useContext(AuthValContext);
 
-    React.useEffect(() => {
-        getData('users')
-        .then((res) => {
-            console.log(res);
-            return setUser(res.data);
-        })
-        .catch((err) => console.log(err));
-    }, []);
+  const [user, setUser] = React.useState([]);
+  const [res, setRes] = React.useState({});
 
-    console.log(user);
+  const [searchParam, setSearchParam] = useSearchParams();
+  console.log('🚀 ~ searchParam:', searchParam.get('page'));
 
-    return (
-        <>
-        <h1>User</h1>
+  let initialPage = CalcPageVal(searchParam.get('page'));
 
-        {user &&
+  const [page, setPage] = React.useState(initialPage);
+
+  React.useEffect(() => {
+    getData(`/users?page=${page}`)
+      .then((res) => {
+        setError(false);
+        setLoading(true);
+        setRes(res);
+        setUser(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log('🚀 ~ err:', err);
+        setError(true);
+      });
+  }, [page]);
+
+  React.useEffect(() => {
+    setSearchParam({ page });
+  }, [page]);
+
+  if (loading) {
+    return <h1>Loading.....</h1>;
+  }
+
+  if (error) {
+    return <h1>something went wrong!!!!</h1>;
+  }
+
+  return (
+    <>
+      <h1>User</h1>
+
+      {user &&
         user.map((items) => {
-            return (
-                <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    gap: '1rem',
-                }}
-                key={items.id}
-                >
-                    <img src={items.avatar} alt={items.first_name}/>
-                    <span>{items.id}</span>
-                    <span>{items.email}</span>
-                    <p>
-                        name {items.first_name} - {items.last_name}
-                    </p>
-                </div>
-            );
+          return (
+            <Link
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+                gap: '1rem',
+              }}
+              key={items.id}
+              to={`/users/${items.id}`}
+            >
+              <img src={items.avatar} alt={items.first_name} />
+              <span>{items.id}</span>
+              <span>{items.email}</span>
+              <p>
+                name {items.first_name} - {items.last_name}
+              </p>
+            </Link>
+          );
         })}
-        
-        </>
-    );
+
+      <button disabled={page <= 1} onClick={() => setPage((prev) => prev - 1)}>
+        prev
+      </button>
+      <span style={{ padding: '1rem' }}>{page}</span>
+      <button
+        disabled={page === res.total_pages}
+        onClick={() => setPage((prev) => prev + 1)}
+      >
+        next
+      </button>
+    </>
+  );
 };
