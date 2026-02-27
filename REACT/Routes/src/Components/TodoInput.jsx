@@ -1,23 +1,24 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import { TodoValContext } from '../Context/TodoContext';
+import * as types from '../Reducer/Action';
 
 export const TodoInput = () => {
-    const { todo, setTodo, text, setText } = useContext(TodoValContext);
+    const { setTodo, text, setText, state, dispatch } = useContext(TodoValContext);
     console.log(todo);
 
     const handleAdd = () => {
-        const todoData = {
-            id: todo.length + 1,
-            text,
-            isEdit: false,
-            isCompleted: false,
-        };
-        setTodo((prev) => [...prev, todoData]);
+        dispatch({ payload: text, type: types.ADD_TODO_ITEMS});
     };
+    
+    useEffect(() => {
+        setTodo(state);
+    }, [state]);
+
     return (
         <>
-        <input type="text" onChange={(e) => setText(e.target.value)}/>
+            <input type="text" onChange={(e) => setText(e.target.value)} />
+            <button onClick={handleAdd}>add</button>
         </>
-    )
-}
+    );
+};
