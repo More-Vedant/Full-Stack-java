@@ -16,7 +16,7 @@ subscribe(() => {
 });
 
 const handleWithdraw = () => {
-  dispatch{( type: WITHDRAW, payload: 20});
+  dispatch({ type: WITHDRAW, payload: 20});
 };
 
 return (
