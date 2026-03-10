@@ -1,5 +1,5 @@
 import React from 'react';
-import { Account } from './'
+import { Account } from './Components/Account';
 
 export const App = () => {
   return (
