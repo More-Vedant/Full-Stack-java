@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputBox } from './Components/InputBox';
 
-import { dummy as Dummy } from './Components/Dummy'
+// import { dummy as Dummy } from './Components/Dummy'
 
 export const App = () => {
   const [value, setValue] = React.useState('');

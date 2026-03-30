@@ -8,8 +8,7 @@ export const InputBox = ({ lable, length, perBox }) => {
 
   const nodeRefData = React.useRef(new Array(length).fill(0));
 
-  const handleChange = (event, index) => {
-    let value = event.target.value;
+  const handleChange = (value, index) => {
 
     let newVal = [...PinValue];
 
@@ -17,8 +16,10 @@ export const InputBox = ({ lable, length, perBox }) => {
 
     setPinValue(newVal);
 
-    // nodeRefData.current[index + 1]?.focus();
+    if(value && index < PinValue.length - 1){
+      nodeRefData.current[index + 1].focus();
   };
+};
 
   console.log('🚀 ~ PinValue:', PinValue);
 
@@ -38,8 +39,8 @@ export const InputBox = ({ lable, length, perBox }) => {
             <PinItems
               key={i + 1}
               max={perBox}
-              handleChangeEvent={(e) => handleChange(e, i)}
-              nodeRefData={(node) => (nodeRefData.current[i] = node)}
+              handleChangeEvent={(val) => handleChange(val, i)}
+              ref={(node) => (nodeRefData.current[i] = node)}
             />
           );
         })}
